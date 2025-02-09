@@ -1,4 +1,3 @@
-import { BiShoppingBag } from "react-icons/bi";
 import { CiShoppingCart } from "react-icons/ci";
 import { FaDollarSign, FaUser } from "react-icons/fa";
 import { FiBarChart2 } from "react-icons/fi";
@@ -11,11 +10,10 @@ export const ICONS = [
   TbTrendingUp,
 ];
 export const DATA = [
-  { id: 0, name: "Overview", icon: FiBarChart2, path: "/" },
+  { id: 0, name: "Overview", path: "/" },
   {
     id: 1,
     name: "Products",
-    color: "#8B5CF6",
     href: "/products",
   },
   { id: 2, name: "Users", href: "/users" },
@@ -32,7 +30,6 @@ export const DATA = [
   {
     id: 5,
     name: "Analytics",
-    color: "#3B82F6",
     href: "/analytics",
   },
 ];
