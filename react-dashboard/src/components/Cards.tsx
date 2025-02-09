@@ -1,7 +1,20 @@
-import React from "react";
+import { IoIosArrowRoundUp } from "react-icons/io";
+import { CardProps } from "../types";
 
-const Cards: React.FC = () => {
-  return <div className=""></div>;
+const Cards = ({ title, content, value, icon }: CardProps) => {
+  return (
+    <div className="m-10 grid gap-5 sm:grid-cols-3  mx-auto max-w-screen-lg">
+      <div className="px-4 py-6 shadow-lg shadow-blue-100">
+        <span className="">{icon}</span>
+        <p className="mt-4 font-medium">{title}</p>
+        <p className="mt-2 text-xl font-medium">
+          {value}
+          <IoIosArrowRoundUp />
+        </p>
+        <span className="text-xs text-gray-400">{content}</span>
+      </div>
+    </div>
+  );
 };
 
 export default Cards;

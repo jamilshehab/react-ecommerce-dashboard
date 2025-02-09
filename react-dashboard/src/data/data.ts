@@ -1,7 +1,7 @@
 import { CiShoppingCart } from "react-icons/ci";
 import { FaDollarSign, FaUser } from "react-icons/fa";
 import { FiBarChart2 } from "react-icons/fi";
-import { TbTrendingUp } from "react-icons/tb";
+import { TbCurrencyDollar, TbTrendingUp } from "react-icons/tb";
 
 export const ICONS = [
   FiBarChart2,
@@ -11,6 +11,7 @@ export const ICONS = [
   TbTrendingUp,
 ];
 
+export const CARD_ICONS = [TbCurrencyDollar];
 export const DATA = [
   { id: 0, name: "Overview", path: "/" },
   {

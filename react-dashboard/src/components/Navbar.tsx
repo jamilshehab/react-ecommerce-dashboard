@@ -1,8 +1,7 @@
 import React from "react";
-export interface Props {
-  title: string;
-}
-const Navbar = ({ title }: Props) => {
+import { HeaderProps } from "../types";
+
+const Navbar = ({ title }: HeaderProps) => {
   return (
     <header className="w-full px-4 py-8 border round-md bg-[#fbf9fa] border-slate-300 ">
       <div className="header">
