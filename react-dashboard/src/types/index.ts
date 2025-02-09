@@ -5,6 +5,7 @@ export interface HeaderProps {
 export interface CardProps {
   title: string;
   content: string;
-  value: number;
+  value: string;
   icon: any;
+  id: number;
 }
