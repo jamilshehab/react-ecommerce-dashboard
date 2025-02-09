@@ -1,4 +1,3 @@
-import React from "react";
 import Navbar from "./Navbar";
 import { CgClose } from "react-icons/cg";
 const Header = () => {
