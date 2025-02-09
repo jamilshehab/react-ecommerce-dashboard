@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { BiX } from "react-icons/bi";
 import { CiMenuBurger } from "react-icons/ci";
 import { Link } from "react-router-dom";
-import { DATA } from "../data/data";
+import { DATA, ICONS } from "../data/data";
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -36,26 +36,34 @@ const Sidebar = () => {
           {/* Close Button */}
           <button
             onClick={toggleSidebar}
-            className="sm:absolute sm:top-4 sm:right-4 sm:text-gray-500 sm:hover:text-gray-700 sm:dark:text-gray-400 sm:dark:hover:text-gray-300 lg:hidden"
+            className="sm:absolute sm:top-4 sm:right-4 sm:text-gray-500 sm:hover:text-gray-700 
+                lg:hidden"
           >
             <BiX size={24} />
           </button>
 
           <ul className="space-y-2 font-medium mt-10">
-            {DATA.map((item: any, index: any) => (
-              <li key={index}>
-                <Link
-                  key={item.id}
-                  to={item.href}
-                  className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-                >
-                  <span className="">
-                    {DATA[item.icon] || null} {item.name}
-                  </span>
-                </Link>
-              </li>
-            ))}
-            {/* Add more menu items here */}
+            {DATA.map((item: any, index: any) => {
+              const Icons = ICONS[index];
+              return (
+                <li key={index}>
+                  <Link
+                    key={item.id}
+                    to={item.href}
+                    className="flex items-center p-2
+                     text-gray-900 rounded-lg
+                      hover:bg-gray-100
+                      group"
+                  >
+                    <span className="">
+                      {" "}
+                      <Icons />
+                      {item.name}
+                    </span>
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </aside>
