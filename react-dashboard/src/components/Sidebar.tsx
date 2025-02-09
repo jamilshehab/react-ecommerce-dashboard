@@ -43,14 +43,14 @@ const Sidebar = () => {
 
           <ul className="space-y-2 font-medium mt-10">
             {DATA.map((item: any, index: any) => (
-              <li>
+              <li key={index}>
                 <Link
                   key={item.id}
                   to={item.href}
                   className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
                 >
-                  <span className="ms-3">
-                    {DATA[item.id] || null} {item.name}
+                  <span className="">
+                    {DATA[item.icon] || null} {item.name}
                   </span>
                 </Link>
               </li>
