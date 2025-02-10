@@ -9,7 +9,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { salesData } from "../data/data";
+import { revenueData, salesData } from "../data/data";
 
 const RevenueBarChart = () => {
   return (
@@ -24,7 +24,7 @@ const RevenueBarChart = () => {
         <LineChart
           width={700}
           height={300}
-          data={salesData}
+          data={revenueData}
           margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
         >
           <CartesianGrid strokeDasharray="3 3" />
