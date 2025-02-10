@@ -19,8 +19,7 @@ const SalesChart = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.3 }}
     >
-      <h2 className="text-xl font-medium py-2 text-gray-600">Sales Overview</h2>
-      <div className="h-30 ">
+      <div className="h-80 ">
         <LineChart
           width={700}
           height={300}

@@ -1,43 +1,48 @@
-import React from "react";
-import { motion } from "framer-motion";
 import {
-  CartesianGrid,
-  Legend,
-  Line,
   LineChart,
-  Tooltip,
+  Line,
   XAxis,
   YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+  BarChart,
+  Bar,
 } from "recharts";
-import { revenueData, salesData } from "../data/data";
+import { motion } from "framer-motion";
+import { revenueData } from "../data/data";
+const salesData = [
+  { name: "Jul", sales: 4200 },
+  { name: "Aug", sales: 3800 },
+  { name: "Sep", sales: 5100 },
+  { name: "Oct", sales: 4600 },
+  { name: "Nov", sales: 5400 },
+  { name: "Dec", sales: 7200 },
+  { name: "Jan", sales: 6100 },
+  { name: "Feb", sales: 5900 },
+  { name: "Mar", sales: 6800 },
+  { name: "Apr", sales: 6300 },
+  { name: "May", sales: 7100 },
+  { name: "Jun", sales: 7500 },
+];
 
-const RevenueBarChart = () => {
+const SalesOverviewChart = () => {
   return (
     <motion.div
-      className="bg-opacity-50 backdrop-blur-md shadow-lg rounded-xl p-12 w-fit  "
+      className="  shadow-lg rounded-xl p-6   "
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.3 }}
+      transition={{ delay: 0.2 }}
     >
-      <h2 className="text-xl font-medium py-2 text-gray-600">Sales Overview</h2>
-      <div className="h-30 ">
-        <LineChart
-          width={700}
-          height={300}
-          data={revenueData}
-          margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-        >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          <Line type="monotone" dataKey="pv" stroke="#8884d8" />
-          <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-        </LineChart>
+      <div className="h-80">
+        <ResponsiveContainer width={"100%"} height={"100%"}>
+          <BarChart width={150} height={40} data={revenueData}>
+            <Bar dataKey="uv" fill="#8884d8" />
+          </BarChart>
+        </ResponsiveContainer>
       </div>
     </motion.div>
   );
 };
 
-export default RevenueBarChart;
+export default SalesOverviewChart;

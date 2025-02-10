@@ -1,16 +1,17 @@
+import { BsBoxArrowUp } from "react-icons/bs";
 import { CiShoppingCart } from "react-icons/ci";
-import { FaDollarSign, FaUser } from "react-icons/fa";
-import { FiBarChart2 } from "react-icons/fi";
+import { FiBarChart2, FiUser } from "react-icons/fi";
 import { LiaProductHunt } from "react-icons/lia";
 import { LuUsers } from "react-icons/lu";
-import { PiEye } from "react-icons/pi";
+import { PiCurrencyDollarThin, PiEye, PiUsersThin } from "react-icons/pi";
 import { TbCurrencyDollar, TbTrendingUp } from "react-icons/tb";
 
 export const ICONS = [
   FiBarChart2,
-  FaUser,
-  FaDollarSign,
+  PiCurrencyDollarThin,
+  PiUsersThin,
   CiShoppingCart,
+  BsBoxArrowUp,
   TbTrendingUp,
 ];
 
@@ -129,25 +130,25 @@ export const salesData = [
 
 export const revenueData = [
   {
-    name: "Revenue A",
+    name: "Page A",
     uv: 4000,
     pv: 2400,
     amt: 2400,
   },
   {
-    name: "Revenue  B",
+    name: "Page B",
     uv: 3000,
     pv: 1398,
     amt: 2210,
   },
   {
-    name: "Revenue C",
+    name: "Page C",
     uv: 2000,
     pv: 9800,
     amt: 2290,
   },
   {
-    name: "Revenue D",
+    name: "Page D",
     uv: 2780,
     pv: 3908,
     amt: 2000,
@@ -171,3 +172,12 @@ export const revenueData = [
     amt: 2100,
   },
 ];
+
+export const dataEx = [
+  { name: "Group A", value: 400 },
+  { name: "Group B", value: 300 },
+  { name: "Group C", value: 300 },
+  { name: "Group D", value: 200 },
+];
+
+export const COLORS = ["#6366F1", "#8B5CF6", "#EC4899", "#10B981", "#F59E0B"];
