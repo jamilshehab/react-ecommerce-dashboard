@@ -13,14 +13,22 @@ const CardContent: React.FC = () => {
       {CARD_CONTENT.map((item, index) => {
         const Icons = CARD_ICONS[index];
         return (
-          <Cards
-            id={item.id}
-            title={item.name}
-            content={item.value}
-            value={item.percentage}
-            icon={Icons && <Icons />}
-            classNames={item.classNames}
-          />
+          <motion.div
+            className="px-4 py-6 shadow-lg shadow-blue-200 border-slate-200 rounded-2xl"
+            key={item.id}
+            whileHover={{
+              y: -5,
+              boxShadow: "0 25px 50px -12px rgba(0,0,0,0.5)",
+            }}
+          >
+            <Cards
+              title={item.name}
+              content={item.value}
+              value={item.percentage}
+              icon={Icons && <Icons />}
+              classNames={item.classNames}
+            />
+          </motion.div>
         );
       })}
     </motion.div>

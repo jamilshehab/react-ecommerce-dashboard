@@ -8,7 +8,6 @@ export interface CardProps {
   value: string;
   icon: any;
   classNames: string;
-  id: number;
 }
 export interface PieChartsProps {
   cx: any;

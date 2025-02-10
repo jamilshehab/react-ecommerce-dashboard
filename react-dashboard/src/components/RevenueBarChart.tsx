@@ -1,7 +1,16 @@
 import React from "react";
-import { BarChart, Bar, ResponsiveContainer } from "recharts";
 import { motion } from "framer-motion";
-import { revenueData } from "../data/data";
+import {
+  CartesianGrid,
+  Legend,
+  Line,
+  LineChart,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from "recharts";
+import { salesData } from "../data/data";
+
 const RevenueBarChart = () => {
   return (
     <motion.div
@@ -10,11 +19,23 @@ const RevenueBarChart = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.3 }}
     >
-      <ResponsiveContainer width="100%" height="100%">
-        <BarChart width={150} height={40} data={revenueData}>
-          <Bar dataKey="uv" fill="#8884d8" />
-        </BarChart>
-      </ResponsiveContainer>
+      <h2 className="text-xl font-medium py-2 text-gray-600">Sales Overview</h2>
+      <div className="h-30 ">
+        <LineChart
+          width={700}
+          height={300}
+          data={salesData}
+          margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Line type="monotone" dataKey="pv" stroke="#8884d8" />
+          <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+        </LineChart>
+      </div>
     </motion.div>
   );
 };

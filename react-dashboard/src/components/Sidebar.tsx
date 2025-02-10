@@ -55,7 +55,7 @@ const Sidebar = () => {
                       hover:bg-gray-100
                       group"
                   >
-                    <span className="inline">
+                    <span className="flex gap-3 items-center">
                       {Icons && <Icons className="w-5 h-5 mr-2" />}
                       {item.name}
                     </span>

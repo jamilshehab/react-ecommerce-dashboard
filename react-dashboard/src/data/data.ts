@@ -41,7 +41,7 @@ export const CARD_CONTENT = [
       "bg-rose-400 text-white h-14 w-15 rounded-lg flex justify-center items-center m-auto",
   },
   {
-    id: 2,
+    id: 3,
     name: "Products",
     value: "23.4k",
     percentage: "+4.9%",
