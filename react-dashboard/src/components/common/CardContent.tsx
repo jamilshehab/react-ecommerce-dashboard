@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { CARD_CONTENT, CARD_ICONS } from "../data/data";
-import Cards from "./Cards";
+import { CARD_CONTENT, CARD_ICONS } from "../../data/data";
+import Cards from "./card/Cards";
 const CardContent: React.FC = () => {
   return (
     <motion.div

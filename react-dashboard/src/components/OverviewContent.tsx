@@ -1,4 +1,4 @@
-import CardContent from "./CardContent";
+import CardContent from "./common/CardContent";
 import CategoryDistributionChart from "./CategoryDistributionChart";
 import Navbar from "./Navbar";
 import SalesOverviewChart from "./RevenueBarChart";

@@ -1,5 +1,5 @@
 import { IoIosArrowRoundUp } from "react-icons/io";
-import { CardProps } from "../types";
+import { CardProps } from "../../../types";
 import { motion } from "framer-motion";
 const Cards = ({ title, content, value, icon, classNames }: CardProps) => {
   return (
