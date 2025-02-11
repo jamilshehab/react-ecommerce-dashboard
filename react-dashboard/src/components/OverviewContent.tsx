@@ -1,8 +1,6 @@
 import CardContent from "./common/CardContent";
 import CategoryDistributionChart from "./CategoryDistributionChart";
-import Navbar from "./Navbar";
 import SalesOverviewChart from "./charts/RevenueBarChart";
-import RevenueBarChart from "./charts/RevenueBarChart";
 import SalesChart from "./charts/SalesChart";
 const OverviewContent: React.FC = () => {
   return (

@@ -1,4 +1,3 @@
-import React from "react";
 import { HeaderProps } from "../types";
 
 const Navbar = ({ title }: HeaderProps) => {
