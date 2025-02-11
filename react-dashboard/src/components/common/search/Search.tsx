@@ -3,16 +3,15 @@ import { CiSearch } from "react-icons/ci";
 
 const Search = () => {
   const [searchValue, setSearchValue] = useState<string>("");
-
   const handleElement = (e: any) => {
     const searchInput = e.target.value;
     setSearchValue(searchInput);
   };
   return (
-    <form className="relative flex w-full max-w-2xl items-center">
+    <form className="relative flex w-full max-w-2xl items-center bg-white shadow-2xl rounded-2xl">
       <CiSearch className="absolute left-2 block h-5 w-5 text-gray-400 " />
       <input
-        onClick={handleElement}
+        onChange={handleElement}
         value={searchValue}
         type="name"
         name="search"
