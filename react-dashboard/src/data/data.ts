@@ -181,3 +181,53 @@ export const dataEx = [
 ];
 
 export const COLORS = ["#6366F1", "#8B5CF6", "#EC4899", "#10B981", "#F59E0B"];
+
+export const productData = [
+  {
+    id: 0,
+    name: "Remote Helicopter",
+    price: "78",
+    status: "Action Required",
+    orderId: "123",
+    orderDate: "2017 21 04",
+    customer: "Omar",
+    className:
+      "ml-2 mr-3 whitespace-nowrap rounded-full bg-purple-100 px-2 py-0.5 text-purple-800",
+    description: "A Brand New Helicopter For Sale ",
+  },
+  {
+    id: 0,
+    name: "Samnsung ",
+    price: "410",
+    status: "Pending",
+    customer: "Mohammad",
+    orderId: "123",
+    orderDate: "2017 21 04",
+    className:
+      "ml-2 mr-3 whitespace-nowrap rounded-full bg-blue-100 px-2 py-0.5 text-blue-800",
+    description: "A New Samnsung Mobile ",
+  },
+  {
+    id: 0,
+    name: "LG",
+    price: "1200",
+    status: "Delivered",
+    customer: "Samir",
+    orderId: "123",
+    orderDate: "2022 21 04",
+    className:
+      "mt-1 ml-auto block w-fit whitespace-nowrap rounded-full bg-green-100 px-2 py-0.5 text-center text-xs text-green-800 lg:hidden",
+    description: "A New Telivision LG",
+  },
+  {
+    id: 0,
+    name: " Iphone 6 ",
+    price: "21",
+    customer: "Ali",
+    status: "Delivered",
+    orderId: "123",
+    orderDate: "2024 21 04",
+    className: "",
+    description: "A Brand New Iphone 6",
+  },
+];

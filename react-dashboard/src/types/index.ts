@@ -19,13 +19,10 @@ export interface PieChartsProps {
   index: any;
 }
 
-export interface TableContentProps {
+export interface ProductTableProps {
   name: string;
+  className: string;
   orderId: string;
-  orderDate: any;
-  price: number;
-  weight: number;
-  description: string;
-  dimentions: string;
-  status: string;
+  orderDate: string;
+  price: string;
 }
