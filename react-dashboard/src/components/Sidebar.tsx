@@ -3,7 +3,7 @@ import { BiX } from "react-icons/bi";
 import { CiMenuBurger } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import { DATA, ICONS } from "../data/data";
-const Sidebar = () => {
+const Sidebar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const toggleSidebar = () => {

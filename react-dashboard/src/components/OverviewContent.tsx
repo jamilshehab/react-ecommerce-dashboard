@@ -1,10 +1,10 @@
 import CardContent from "./common/CardContent";
 import CategoryDistributionChart from "./CategoryDistributionChart";
 import Navbar from "./Navbar";
-import SalesOverviewChart from "./RevenueBarChart";
-import RevenueBarChart from "./RevenueBarChart";
-import SalesChart from "./SalesChart";
-const OverviewContent = () => {
+import SalesOverviewChart from "./charts/RevenueBarChart";
+import RevenueBarChart from "./charts/RevenueBarChart";
+import SalesChart from "./charts/SalesChart";
+const OverviewContent: React.FC = () => {
   return (
     <div>
       <div className="p-4 sm:ml-64">
