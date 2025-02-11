@@ -1,5 +1,5 @@
 import CardContent from "./common/CardContent";
-import CategoryDistributionChart from "./CategoryDistributionChart";
+import CategoryDistributionChart from "./charts/CategoryDistributionChart";
 import SalesOverviewChart from "./charts/RevenueBarChart";
 import SalesChart from "./charts/SalesChart";
 const OverviewContent: React.FC = () => {

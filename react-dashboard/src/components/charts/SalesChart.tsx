@@ -9,7 +9,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { salesData } from "../data/data";
+import { salesData } from "../../data/data";
 
 const SalesChart = () => {
   return (

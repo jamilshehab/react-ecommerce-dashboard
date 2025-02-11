@@ -7,8 +7,8 @@ import {
   Tooltip,
   Legend,
 } from "recharts";
-import { PieChartsProps } from "../types";
-import { categoryData, COLORS, dataEx } from "../data/data";
+import { PieChartsProps } from "../../types";
+import { categoryData, COLORS, dataEx } from "../../data/data";
 
 const renderCustomizedLabel = ({
   cx,
