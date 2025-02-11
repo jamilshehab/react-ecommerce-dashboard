@@ -216,7 +216,7 @@ export const productData = [
     orderId: "123",
     orderDate: "2022 21 04",
     className:
-      "mt-1 ml-auto block w-fit whitespace-nowrap rounded-full bg-green-100 px-2 py-0.5 text-center text-xs text-green-800 lg:hidden",
+      "ml-2 mr-3 whitespace-nowrap rounded-full bg-green-100 px-2 py-0.5 text-green-800",
     description: "A New Telivision LG",
   },
   {
@@ -227,7 +227,29 @@ export const productData = [
     status: "Delivered",
     orderId: "123",
     orderDate: "2024 21 04",
-    className: "",
+    className:
+      "ml-2 mr-3 whitespace-nowrap rounded-full bg-green-100 px-2 py-0.5 text-green-800",
     description: "A Brand New Iphone 6",
   },
+];
+export const productHeadingData = [
+  {
+    id: 0,
+    name: "Order Date",
+  },
+  {
+    id: 1,
+    name: "Order ID",
+  },
+  {
+    id: 2,
+    name: " Title",
+  },
+  {
+    id: 3,
+    name: "Customer",
+  },
+  { id: 4, name: "Price" },
+  { id: 5, name: "Description" },
+  { id: 7, name: "Status" },
 ];

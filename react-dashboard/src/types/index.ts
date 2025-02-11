@@ -24,6 +24,7 @@ export interface ProductTableProps {
   className: string;
   orderId: string;
   orderDate: string;
+  description: string;
   price: string;
   customer: string;
   productStatus: string;

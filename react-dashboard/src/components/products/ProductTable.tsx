@@ -3,8 +3,19 @@ import { ProductTableProps } from "../../types/index";
 import Thead from "./subcomponent/Thead";
 import Tbody from "./subcomponent/Tbody";
 import { productData } from "../../data/data";
+import { useState } from "react";
 
 const ProductTable = () => {
+  const [searchValue, setSearchValue] = useState<string>("");
+
+  const searchElements = (newSearchValue: any) => {
+    setSearchValue(newSearchValue);
+    productData.map((product: any) => {
+      if (product.includes(searchValue)) {
+        setSearchValue(product);
+      }
+    });
+  };
   return (
     <div>
       <div className="">
@@ -12,7 +23,7 @@ const ProductTable = () => {
           <div className="mt-4 w-full">
             <div className="flex w-full flex-col items-center justify-between space-y-2 sm:flex-row sm:space-y-0">
               {/** Search Component */}
-              <Search />
+              <Search searchElements={searchElements} />
               {/** Search Component */}
             </div>
           </div>
@@ -29,6 +40,7 @@ const ProductTable = () => {
                     orderDate={item.orderDate}
                     customer={item.customer}
                     product={item.name}
+                    description={item.description}
                     productStatus={item.status}
                     price={item.price}
                   />
