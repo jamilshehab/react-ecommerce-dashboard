@@ -1,6 +1,8 @@
 import Search from "../common/search/Search";
 import { ProductTableProps } from "../../types/index";
 import Thead from "./subcomponent/Thead";
+import Tbody from "./subcomponent/Tbody";
+import { productData } from "../../data/data";
 
 const ProductTable = () => {
   return (
@@ -19,33 +21,18 @@ const ProductTable = () => {
             <table className="min-w-full border-collapse border-spacing-y-2 border-spacing-x-2">
               <Thead />
               <tbody className="bg-white lg:border-gray-300">
-                <tr className="">
-                  <td className="whitespace-no-wrap py-4 text-left text-sm text-gray-600 sm:px-3 lg:text-left">
-                    07 February, 2022
-                  </td>
-
-                  <td className="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-600 sm:px-3 lg:table-cell">
-                    62345231143
-                  </td>
-
-                  <td className="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-600 sm:px-3 lg:table-cell">
-                    Desktop Computer
-                  </td>
-
-                  <td className="whitespace-no-wrap hidden py-4 text-left text-sm text-gray-600 sm:px-3 lg:table-cell lg:text-left">
-                    Jane Doeson
-                  </td>
-
-                  <td className="whitespace-no-wrap hidden py-4 text-left text-sm text-gray-600 sm:px-3 lg:table-cell lg:text-left">
-                    1.0 Kg
-                  </td>
-                  <td className="whitespace-no-wrap py-4 text-right text-sm text-gray-600 sm:px-3 lg:text-left">
-                    $59.00
-                    <span className="mt-1 ml-auto block w-fit whitespace-nowrap rounded-full bg-purple-100 px-2 py-0.5 text-center text-xs text-purple-800 lg:hidden">
-                      Action Required
-                    </span>
-                  </td>
-                </tr>
+                {productData.map((item: any) => (
+                  <Tbody
+                    key={item.id}
+                    className={item.className}
+                    orderId={item.orderId}
+                    orderDate={item.orderDate}
+                    customer={item.customer}
+                    product={item.name}
+                    productStatus={item.status}
+                    price={item.price}
+                  />
+                ))}
               </tbody>
             </table>
           </div>

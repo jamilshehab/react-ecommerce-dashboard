@@ -20,9 +20,11 @@ export interface PieChartsProps {
 }
 
 export interface ProductTableProps {
-  name: string;
+  product: string;
   className: string;
   orderId: string;
   orderDate: string;
   price: string;
+  customer: string;
+  productStatus: string;
 }

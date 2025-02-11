@@ -196,7 +196,7 @@ export const productData = [
     description: "A Brand New Helicopter For Sale ",
   },
   {
-    id: 0,
+    id: 1,
     name: "Samnsung ",
     price: "410",
     status: "Pending",
@@ -208,7 +208,7 @@ export const productData = [
     description: "A New Samnsung Mobile ",
   },
   {
-    id: 0,
+    id: 2,
     name: "LG",
     price: "1200",
     status: "Delivered",
@@ -220,7 +220,7 @@ export const productData = [
     description: "A New Telivision LG",
   },
   {
-    id: 0,
+    id: 3,
     name: " Iphone 6 ",
     price: "21",
     customer: "Ali",
