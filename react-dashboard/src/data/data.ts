@@ -1,6 +1,6 @@
 import { BsBoxArrowUp } from "react-icons/bs";
 import { CiShoppingCart } from "react-icons/ci";
-import { FiBarChart2, FiUser } from "react-icons/fi";
+import { FiBarChart2 } from "react-icons/fi";
 import { LiaProductHunt } from "react-icons/lia";
 import { LuUsers } from "react-icons/lu";
 import { PiCurrencyDollarThin, PiEye, PiUsersThin } from "react-icons/pi";
