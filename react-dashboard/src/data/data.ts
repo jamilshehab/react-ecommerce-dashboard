@@ -231,6 +231,30 @@ export const productData = [
       "ml-2 mr-3 whitespace-nowrap rounded-full bg-green-100 px-2 py-0.5 text-green-800",
     description: "A Brand New Iphone 6",
   },
+  {
+    id: 4,
+    name: "LCD TV ",
+    price: "410",
+    status: "Pending",
+    customer: "Mohammad",
+    orderId: "123",
+    orderDate: "2025 21 04",
+    className:
+      "ml-2 mr-3 whitespace-nowrap rounded-full bg-blue-100 px-2 py-0.5 text-blue-800",
+    description: "A New LCD TV ",
+  },
+  {
+    id: 5,
+    name: " HeadPhones ",
+    price: "21",
+    customer: "Ali",
+    status: "Delivered",
+    orderId: "123",
+    orderDate: "2024 21 04",
+    className:
+      "ml-2 mr-3 whitespace-nowrap rounded-full bg-green-100 px-2 py-0.5 text-green-800",
+    description: "A Brand New HeadPhones",
+  },
 ];
 export const productHeadingData = [
   {
