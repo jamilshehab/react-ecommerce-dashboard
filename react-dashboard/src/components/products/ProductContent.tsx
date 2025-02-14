@@ -1,5 +1,4 @@
-import React from "react";
-import CardContent from "../common/CardContent";
+ import CardContent from "../common/CardContent";
 import ProductTable from "./ProductTable";
 const ProductContent = () => {
   return (

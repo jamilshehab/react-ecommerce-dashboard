@@ -1,5 +1,4 @@
-import React from "react";
-import { productData, productHeadingData } from "../../../data/data";
+import { productHeadingData } from "../../../data/data";
 
 const Thead = () => {
   return (

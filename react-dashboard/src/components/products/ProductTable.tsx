@@ -1,21 +1,16 @@
 import Search from "../common/search/Search";
-import { ProductTableProps } from "../../types/index";
 import Thead from "./subcomponent/Thead";
 import Tbody from "./subcomponent/Tbody";
 import { productData } from "../../data/data";
 import { useState } from "react";
 
 const ProductTable = () => {
-  const [searchValue, setSearchValue] = useState<string>("");
-
-  const searchElements = (newSearchValue: any) => {
-    setSearchValue(newSearchValue);
-    productData.map((product: any) => {
-      if (product.includes(searchValue)) {
-        setSearchValue(product);
-      }
-    });
+  const [searchQuery, setSearchQuery] = useState<any>("");
+  const handleElement = (e: any) => {
+    const searchInput = e.target.value;
+    setSearchQuery(searchInput);
   };
+
   return (
     <div>
       <div className="">
@@ -23,7 +18,7 @@ const ProductTable = () => {
           <div className="mt-4 w-full">
             <div className="flex w-full flex-col items-center justify-between space-y-2 sm:flex-row sm:space-y-0">
               {/** Search Component */}
-              <Search searchElements={searchElements} />
+              <Search onChange={handleElement} />
               {/** Search Component */}
             </div>
           </div>
@@ -31,21 +26,25 @@ const ProductTable = () => {
           <div className="mt-6 overflow-hidden rounded-xl bg-white px-6 shadow lg:px-4">
             <table className="min-w-full border-collapse border-spacing-y-2 border-spacing-x-2">
               <Thead />
-              <tbody className="bg-white lg:border-gray-300">
-                {productData.map((item: any) => (
+              {productData
+                .filter((item: any) => {
+                  return searchQuery === ""
+                    ? item
+                    : item.name.includes(searchQuery);
+                })
+                .map((item: any) => (
                   <Tbody
                     key={item.id}
-                    className={item.className}
                     orderId={item.orderId}
-                    orderDate={item.orderDate}
-                    customer={item.customer}
-                    product={item.name}
-                    description={item.description}
-                    productStatus={item.status}
+                    name={item.name}
                     price={item.price}
+                    productStatus={item.status}
+                    customer={item.customer}
+                    className={item.className}
+                    description={item.description}
+                    orderDate={item.orderDate}
                   />
                 ))}
-              </tbody>
             </table>
           </div>
         </div>
